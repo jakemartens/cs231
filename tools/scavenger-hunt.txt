@@ -1,3 +1,6 @@
 Jake Martens
-This is my response for the assignment due 4/2
-1.
+This is my response for the assignment due 4/2. I am working on  my MacBook running macOS 11.2.2.
+1.  I used the command "ipconfig getifaddr en0" to get my IP address "137.22.177.19". Online it says that "en0" is for wireless connections and "en1" is for wired. I am using Wi-Fi, so "en1" did not return anything.
+2. The "ping" command followed by the host name returns the IP address, although I did have to terminate the command as it kept returning the same response. I also was able to use "nslookup" to achieve similar results, although in a more presentable form.
+3. In terminal we can write "host [ip]" where [ip] is replaced with an IP address.
+4. 
