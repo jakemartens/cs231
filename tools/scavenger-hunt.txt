@@ -1,11 +1,22 @@
 Jake Martens
 This is my response for the assignment due 4/2. I am working on  my MacBook running macOS 11.2.2.
+
 1.  I used the command "ipconfig getifaddr en0" to get my IP address "137.22.177.19". Online it says that "en0" is for wireless connections and "en1" is for wired. I am using Wi-Fi, so "en1" did not return anything.
+
 2. The "ping" command followed by the host name returns the IP address, although I did have to terminate the command as it kept returning the same response. I also was able to use "nslookup" to achieve similar results, although in a more presentable form.
+
 3. In terminal we can write "host [ip]" where [ip] is replaced with an IP address.
-4.
-5. 
-6. 
+
+4. I achieved file-sending using netcat. On the receiving machine, in my case a Mac, I used the command "nc -l [port] > [filename]" where [port] is the port of our choice and [filename] is the file being sent. On the sending machine, here it was Kali in the remote lab, I wrote the command "nc -w 3 [IP address] [port] < [filename]" where [IP address] is the IP address for the receiving computer. If the receiving computer had run Linux, we would have used the -p switch after the -l switch.  Afterwards, I used ctrl-c to end the process.
+
+As far as saving it to my Math/CS account, I would imagine the process would be similar. It is unclear to me if I need to have access to the receiving computer in all cases, but I would imagine the answer to this question is yes. I would have to open up the port connection to use this method.
+
+5. I used this command: "lsof -nP -iTCP -sTCP:LISTEN | grep [port-number]" where [port-number] is the port we are examining. Then I used the command "ps -Ao user,pid,command | grep -v grep | grep [PID]" where [PID] is one of the values returned after the first command. My success rate was so-so and I am not certain that this is the best process to use.
+
+I also saw "lsof -i :[port-number]" floated as an option, but when I tried to test this in terminal, nothing was ever returned.
+
+6. I used this command: "lsof -i -P | grep LISTEN". This seemed to produce the desired output. By using "sudo lsof -i -P | grep LISTEN" and entering my password, a few more lines were listed, I would assume due to the extra privileges offered by sudo.
+
 7. We use "curl -L [url] [filename]" where [url] is the url of the desired webpage and [filename] is what we want to name the file. In some documentation I read, the -L switch was not used, but in my tests, each call returned a message saying moved permanently. The -L automatically redirects to the correct location. The filename should also be a .html file in order to open properly.
+
 8. We can use "curl -I [url]" where [url] is replaced with the url of the web page whose headers we are trying to access.  
-9.  
