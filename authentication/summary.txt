@@ -6,11 +6,11 @@ Passwords cracked per number of hashes computed: .004
 Time per password cracked: 5.16*10^{-5}s
 
 Part 2
-Passwords cracked: 2266
+Passwords cracked: 1133
 Total time: 1242.92s
 Number of hashes computed: 622,788,826
-Passwords cracked per number of hashes computed: 3.64*10^{-6}
-Time per password cracked: 0.55s
+Passwords cracked per number of hashes computed: 1.82*10^{-6}
+Time per password cracked: 1.1s
 
 Factor by which your time per password lengthened, and why.
-The time increased by a factor of 10651.67. We found the full set of hashes for each salt, so for every user we needed to recreate a new hash table. The timing increased accordingly.
+The time increased by a factor of 21245.56. We found the full set of hashes for each salt, so for every user we needed to recreate a new hash table. The timing increased accordingly.
